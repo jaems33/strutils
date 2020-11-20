@@ -1,0 +1,23 @@
+{
+  "name": "strutils",
+  "version": "1.0.0",
+  "description": "Small utility algorithms for strings.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaems33/strutils.git"
+  },
+  "keywords": [
+    "string",
+    "utility"
+  ],
+  "author": "James Teow <james.teow33@gmail.com> (http://www.jamesteow.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jaems33/strutils/issues"
+  },
+  "homepage": "https://github.com/jaems33/strutils#readme"
+}
