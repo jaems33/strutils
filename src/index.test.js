@@ -25,6 +25,13 @@ describe('isString', function(){
   it('should return a number as false', function(){
     expect(Strutils.isString(49)).to.equal(false);
   });
+
+  class Sample {}
+
+  it('should return a custom class as false', function(){
+    expect(Strutils.isString(new Sample())).to.equal(false);
+  });
+
 });
 
 describe('titleCase', function(){
