@@ -1,8 +1,9 @@
 {
   "name": "@jaems/strutils",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "description": "Small utility algorithms for strings.",
   "main": "src/index.js",
+  "module": "src/index.js",
   "types": "src/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
