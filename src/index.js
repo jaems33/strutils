@@ -2,14 +2,14 @@ function titleCaseLetter(letter) {
   return letter.toUpperCase();
 }
 
-export function isString(input) {
+function isString(input) {
   return typeof input === 'string' || input instanceof String
 }
 
-export function toTitleCase(input, useRules = false) {
+function toTitleCase(input, useRules = false) {
   if (!isString(input)) return input;
   else if (useRules) {
-    return input.replace(/((?:^|\.)\W|\b(?!(?:a|at|by|in|of|out|on|en|re|vs|bar|mid|per|pro|qua|til|amid|anti|atop|down|less|like|near|over|up|to|but|for|off|out|via|other|from|ll|ve|re|into|unto|with|for|and|nor|but|or|v|yet|so|t|s)\b)\w)/g,
+    return input.replace(/((?:^|\.)\W|\b(?!(?:a|at|by|the|in|of|out|on|en|re|vs|bar|mid|per|pro|qua|til|amid|anti|atop|down|less|like|near|over|up|to|but|for|off|out|via|other|from|ll|ve|re|into|unto|with|for|and|nor|but|or|v|yet|so|t|s)\b)\w)/g,
       titleCaseLetter);
   } else {
     return input.replace(/((:^)\w|\b)\w/g,
@@ -17,7 +17,11 @@ export function toTitleCase(input, useRules = false) {
   }
 }
 
-export function removeSpaces(input, includeNewLines=true){
+function removeSpaces(input, removeNewLines=true){
   if (!isString(input)) return input;
-  return includeNewLines ? input.replace(/\s/g, '') : input.replace(/\h/g, '');
+  return removeNewLines ? input.replace(/\s/g, '') : input.replace(/(?:(?!\n)\s)/g, '');
+}
+
+module.exports = {
+  toTitleCase, isString, removeSpaces
 }
