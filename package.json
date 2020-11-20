@@ -1,6 +1,6 @@
 {
   "name": "@jaems/strutils",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "Small utility algorithms for strings.",
   "main": "src/index.js",
   "types": "src/index.d.ts",
