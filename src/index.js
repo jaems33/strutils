@@ -1,9 +1,9 @@
-export function isString(input) {
-  return typeof input === 'string' || input instanceof String
-}
-
 function titleCaseLetter(letter) {
   return letter.toUpperCase();
+}
+
+export function isString(input) {
+  return typeof input === 'string' || input instanceof String
 }
 
 export function toTitleCase(input, useRules = false) {
@@ -17,3 +17,7 @@ export function toTitleCase(input, useRules = false) {
   }
 }
 
+export function removeSpaces(input, includeNewLines=true){
+  if (!isString(input)) return input;
+  return includeNewLines ? input.replace(/\s/g, '') : input.replace(/\h/g, '');
+}
