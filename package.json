@@ -1,14 +1,14 @@
 {
   "name": "@jaems/strutils",
-  "version": "1.1.0-beta.4",
+  "version": "1.1.0-beta.5",
   "description": "Small utility algorithms for strings.",
   "main": "src/index.js",
   "module": "src/index.js",
   "types": "src/index.d.ts",
   "scripts": {
     "commit": "git-cz",
-    "test": "mocha src/index.test.js -w",
-    "test:single": "mocha src/index.test.js",
+    "test": "jest --watch",
+    "test:single": "jest",
     "semantic-release": "semantic-release"
   },
   "repository": {
@@ -26,14 +26,13 @@
   },
   "homepage": "https://github.com/jaems33/strutils#readme",
   "devDependencies": {
-    "chai": "^4.2.0",
     "commitizen": "^4.2.2",
     "cz-conventional-changelog": "^3.3.0",
     "ghooks": "^2.0.4",
-    "mocha": "^8.2.1",
+    "jest": "^26.6.3",
     "semantic-release": "^17.2.4"
   },
-  "config":{
+  "config": {
     "commitzen": {
       "path": "node_modules/cz-conventional-changelog"
     },

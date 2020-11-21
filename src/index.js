@@ -12,8 +12,7 @@ function toTitleCase(input, useRules = false) {
     return input.replace(/((?:^|\.)\W|\b(?!(?:a|at|by|the|in|of|out|on|en|re|vs|bar|mid|per|pro|qua|til|amid|anti|atop|down|less|like|near|over|up|to|but|for|off|out|via|other|from|ll|ve|re|into|unto|with|for|and|nor|but|or|v|yet|so|t|s)\b)\w)/g,
       titleCaseLetter);
   } else {
-    return input.replace(/((:^)\w|\b)\w/g,
-      titleCaseLetter);
+    return input.replace(/((:^)\w|\b)\w/g, titleCaseLetter);
   }
 }
 
